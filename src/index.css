@@ -60,6 +60,18 @@ body {
 ul {
   list-style-type: none;
   list-style: none;
+  padding-inline-start: 0px;
+}
+
+#modal li {
+  font-weight: bold;
+  font-size: 18px;
+  max-width: 50%;
+  margin: 0 auto;
+}
+#modal li span{
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .normalText ul {
@@ -89,7 +101,10 @@ ul {
   outline: #3B0B0B dotted thick;
   transition: 0.75s;
   opacity: 1;
+  width: 45%;
 }
+
+
 
 .minBackgroundSneak {
   position: absolute;
@@ -114,14 +129,16 @@ ul {
 
 .minPigTile {
   width: 250px;
-  height: 250px;
+  height: 200px;
   background-size: cover;
+  object-fit: contain;
 }
 
 .maxPigTile {
   background-size: cover;
-  width: 500px;
+  width: 100%;
   height: 500px;
+  object-fit: cover;
 }
 
 .pigTile:hover {
@@ -140,6 +157,43 @@ ul {
   clear: both;
 }
 
+
+.hide {
+  visibility: hidden;
+}
+
+#modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+#modal {
+  height: 70%;
+  width: 35%;
+  background: #eee;
+  padding: 50px;
+  min-width: 290px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.pigImg {
+  width: 500px;
+  height: 350px;
+  object-fit: cover;
+}
+
+hr {
+  margin-bottom: 20px;
+}
 
 @keyframes App-logo-spin {
   from {
